@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>de.markiewb.netbeans.plugins</groupId>
+    <artifactId>nb.my.plugin</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>nb.my.plugin</name>
+    <packaging>nbm</packaging>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>nbm-maven-plugin</artifactId>
+                <version>3.13</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <!-- keep it for backwards compatibility to previous versions-->
+                    <codeNameBase>nb.my.plugin</codeNameBase>
+                    <licenseFile>LICENSE-2.0.txt</licenseFile>
+                    <author>Benno Markiewicz (benno.markiewicz@googlemail.com)</author>
+                    <homePageUrl>https://github.com/markiewb/nb-my-plugin</homePageUrl>
+                    <keystore>nbproject/private/keystore</keystore>
+                    <keystorealias>myself</keystorealias>
+                    <licenseName>Apache 2.0</licenseName>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.5.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <useDefaultManifestFile>true</useDefaultManifestFile>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <repositories>
+        <repository>
+            <id>netbeans</id>
+            <name>Repository hosting NetBeans modules</name>
+            <url>http://bits.netbeans.org/nexus/content/groups/netbeans</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <dependencies>
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-netbeans-api-annotations-common</artifactId>
+            <version>RELEASE802</version>
+        </dependency>
+    </dependencies>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <description>This plugin adds ...
+
+&lt;p&gt;
+Features:
+&lt;ul&gt;
+&lt;li&gt;Supports FOO&lt;/li&gt;
+&lt;li&gt;Supports BAR (since 1.2.0)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;img src="https://raw.github.com/markiewb/nb-my-plugin/master/doc/screenshot-1.0.0.png"/&gt;
+
+&lt;h2&gt;Updates in 1.0.0:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[&lt;a href="https://github.com/markiewb/nb-my-plugin/issues/1"&gt;Bugfix &lt;/a&gt;]:  Fixed NPE&lt;/li&gt;
+&lt;li&gt;[&lt;a href="https://github.com/markiewb/nb-my-plugin/issues/2"&gt;Feature&lt;/a&gt;]:  Introduced FOO&lt;/li&gt;
+
+&lt;/ul&gt;
+
+
+&lt;p&gt;Provide defects, request for enhancements and feedback at &lt;a href="https://github.com/markiewb/nb-my-plugin/issues"&gt;https://github.com/markiewb/nb-my-plugin/issues&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Compatible to &gt;=NB 8.0&lt;/p&gt;
+&lt;p&gt;Legal disclaimer: Code is licensed under Apache 2.0.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=K4CMP92RZELE2"&gt;&lt;img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0"&gt;&lt;/a&gt;
+&lt;/p&gt;
+</description>
+
+</project>
